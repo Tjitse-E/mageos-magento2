@@ -12,7 +12,10 @@ $captcha = $block->getCaptchaModel();
 $validationEnabled = $block->hasData('frontend_validation') ? $block->getData('frontend_validation') : true;
 $inputName = $block->escapeHtmlAttr(\Magento\Captcha\Helper\Data::INPUT_NAME_FIELD_VALUE);
 $loaderUrl = $block->escapeUrl($block->getViewFileUrl('images/loader-2.gif'));
-$note = $block->escapeHtml(__('<strong>Attention</strong>: Captcha is case sensitive.'), ['strong']);
+
+
+$note = $block->escapeHtml(__('<strong>Attention</strong>: Captcha is case sensitive.'),
+                           ['strong']);
 ?>
 <div class="field captcha<?php if ($validationEnabled): ?> required<?php endif; ?>"
      role="<?= $block->escapeHtmlAttr($block->getFormId()) ?>">

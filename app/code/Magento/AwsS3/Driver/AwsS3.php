@@ -30,7 +30,8 @@ use Throwable;
  * @SuppressWarnings(PHPMD.ExcessiveClassComplexity)
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */
-class AwsS3 implements RemoteDriverInterface
+class AwsS3
+    implements RemoteDriverInterface
 {
     public const TYPE_DIR = 'dir';
     public const TYPE_FILE = 'file';
@@ -75,6 +76,9 @@ class AwsS3 implements RemoteDriverInterface
         LoggerInterface $logger,
         string $objectUrl,
         MetadataProviderInterface $metadataProvider = null
+
+
+
     ) {
         $this->adapter = $adapter;
         $this->logger = $logger;
