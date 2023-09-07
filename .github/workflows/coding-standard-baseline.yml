@@ -1,8 +1,6 @@
 name: Coding Standard With Baseline
 on:
   push:
-    branches:
-      - testing/codingstandard_baseline_integration
   pull_request:
     branches:
       - 2.4-develop
