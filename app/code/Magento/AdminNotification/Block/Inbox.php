@@ -11,12 +11,15 @@ namespace Magento\AdminNotification\Block;
  * @api
  * @since 100.0.2
  */
-class Inbox extends \Magento\Backend\Block\Widget\Grid\Container
+class Inbox
+    extends \Magento\Backend\Block\Widget\Grid\Container
 {
     /**
      * @return void
      */
-    protected function _construct()
+    protected function _construct(
+
+    )
     {
         $this->_controller = 'adminhtml';
         $this->_blockGroup = 'Magento_AdminNotification';
