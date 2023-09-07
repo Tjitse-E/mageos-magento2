@@ -25,6 +25,7 @@ class DisableAdminUsage extends Action implements HttpPostActionInterface
      */
     private $configFactory;
 
+
     /**
      * @var ProductMetadataInterface
      */
