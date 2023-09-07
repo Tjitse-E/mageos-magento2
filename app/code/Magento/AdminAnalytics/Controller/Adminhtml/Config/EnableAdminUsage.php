@@ -43,8 +43,8 @@ class EnableAdminUsage extends Action implements HttpPostActionInterface
      */
     public function __construct(
         Action\Context $context,
-        ProductMetadataInterface $productMetadata,
-        NotificationLogger $notificationLogger,
+        ProductMetadataInterface $productMetadata
+        NotificationLogger $notificationLogger
         Factory $configFactory
     ) {
         parent::__construct($context);
