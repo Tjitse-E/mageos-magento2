@@ -8,6 +8,7 @@ permissions:
 
 jobs:
   setup-di-compile:
+    name: Run bin/magento setup:di:compile
     runs-on: ubuntu-latest
     steps:
       - name: Run setup:di:compile
