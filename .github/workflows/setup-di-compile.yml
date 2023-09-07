@@ -1,0 +1,14 @@
+name: Run setup:di:compile
+
+on:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  setup-di-compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run setup:di:compile
+        uses: Tjitse-E/github-actions/setup-di-compile@feature/setup-di-compile
