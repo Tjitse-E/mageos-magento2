@@ -29,6 +29,11 @@ jobs:
     name: Run bin/magento setup:di:compile
     runs-on: ubuntu-latest
     steps:
+      - name: Debug inputs
+        run: |
+          echo "PHP Version: ${{ github.event.inputs.php_version }}"
+          echo "Composer Version: ${{ github.event.inputs.composer_version }}"
+
       - name: Run setup:di:compile
         uses: Tjitse-E/github-actions/setup-di-compile@feat/setup-di-compile-branch-input
         with:
