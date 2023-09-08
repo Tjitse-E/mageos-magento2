@@ -2,6 +2,20 @@ name: Run setup:di:compile
 
 on:
   push:
+  workflow_dispatch:
+    inputs:
+      php_version:
+        description: 'The PHP version to use'
+        required: true
+        default: '8.1'
+        type: choice
+        options:
+          - '8.1'
+          - '8.2'
+      branch:
+        description: 'The branch to use'
+        required: false
+        default: ''
 
 permissions:
   contents: read
@@ -12,4 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run setup:di:compile
-        uses: Tjitse-E/github-actions/setup-di-compile@feat/setup-di-compile-v2
+        uses: Tjitse-E/github-actions/setup-di-compile@feat/setup-di-compile-branch-input
+        with:
+          php_version: ${{ github.event.inputs.php_version }}
+          branch: ${{ github.event.inputs.branch }}
