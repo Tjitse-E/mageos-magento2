@@ -12,10 +12,14 @@ on:
         options:
           - '8.1'
           - '8.2'
-      branch:
-        description: 'The branch to use'
-        required: false
-        default: ''
+      composer_version:
+        description: 'The version of composer to use'
+        required: true
+        default: '2'
+        type: choice
+        options:
+          - '1'
+          - '2'
 
 permissions:
   contents: read
@@ -29,4 +33,4 @@ jobs:
         uses: Tjitse-E/github-actions/setup-di-compile@feat/setup-di-compile-branch-input
         with:
           php_version: ${{ github.event.inputs.php_version }}
-          branch: ${{ github.event.inputs.branch }}
+          composer_version: ${{ github.event.inputs.composer_version }}
