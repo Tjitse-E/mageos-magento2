@@ -10,5 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Coding Standard Baseline
-        uses: mage-os/github-actions/coding-standard-baseline@main
+        uses: Tjitse-E/github-actions/coding-standard-baseline@bugfix/baseline-composer-conflicts
 
