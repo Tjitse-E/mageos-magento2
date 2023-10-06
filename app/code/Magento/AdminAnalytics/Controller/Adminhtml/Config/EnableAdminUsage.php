@@ -15,6 +15,7 @@ use Magento\Framework\App\ProductMetadataInterface;
 use Magento\Framework\Controller\ResultInterface;
 use Magento\Config\Model\Config\Factory;
 
+
 /**
  * Controller to record that the current admin user has responded to Admin Analytics notice
  */
