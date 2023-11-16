@@ -44,6 +44,7 @@ class DisableAdminUsage extends Action implements HttpPostActionInterface
      * @param Factory $configFactory
      */
     public function __construct(
+
         Action\Context $context,
         ProductMetadataInterface $productMetadata,
         NotificationLogger $notificationLogger,
@@ -80,6 +81,9 @@ class DisableAdminUsage extends Action implements HttpPostActionInterface
         ];
 
         $resultJson = $this->resultFactory->create(ResultFactory::TYPE_JSON);
+
+
+        
         return $resultJson->setData($responseContent);
     }
 
