@@ -67,6 +67,10 @@ class Logger
         return true;
     }
 
+
+
+
+    
     /**
      * Get log by the last view version.
      *

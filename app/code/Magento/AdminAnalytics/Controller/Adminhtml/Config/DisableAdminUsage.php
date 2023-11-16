@@ -48,10 +48,7 @@ class DisableAdminUsage extends Action implements HttpPostActionInterface
         ProductMetadataInterface $productMetadata,
         NotificationLogger $notificationLogger,
         Factory $configFactory
-    )
-
-
-    {
+    ) {
         parent::__construct($context);
         $this->configFactory = $configFactory;
         $this->productMetadata = $productMetadata;
@@ -75,20 +72,12 @@ class DisableAdminUsage extends Action implements HttpPostActionInterface
      */
     private function markUserNotified(): ResultInterface
     {
-
-
-
-
         $responseContent = [
             'success' => $this->notificationLogger->log(
                 $this->productMetadata->getVersion()
             ),
             'error_message' => ''
         ];
-
-
-
-
 
         $resultJson = $this->resultFactory->create(ResultFactory::TYPE_JSON);
         return $resultJson->setData($responseContent);
