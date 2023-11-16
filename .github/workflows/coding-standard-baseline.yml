@@ -1,8 +1,5 @@
 name: Coding Standard With Baseline
 on:
-  push:
-      branches:
-        - test/integration-test-pr-withbaseline-tests
   pull_request:
     branches:
       - 2.4-develop
@@ -13,5 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Coding Standard Baseline
-        uses: mage-os/github-actions/coding-standard-baseline@main
+        uses: Tjitse-E/github-actions/coding-standard-baseline@bugfix/changed-files
+        with:
+          head_repo: ${{github.event.pull_request.head.repo.full_name}}
+          head_ref: ${{github.event.pull_request.head.ref}}
 
