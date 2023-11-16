@@ -72,6 +72,7 @@ class DisableAdminUsage extends Action implements HttpPostActionInterface
      */
     private function markUserNotified(): ResultInterface
     {
+        
         $responseContent = [
             'success' => $this->notificationLogger->log(
                 $this->productMetadata->getVersion()
