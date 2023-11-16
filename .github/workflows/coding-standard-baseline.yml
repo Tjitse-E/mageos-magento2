@@ -12,6 +12,8 @@ jobs:
       - name: Run Coding Standard Baseline
         uses: Tjitse-E/github-actions/coding-standard-baseline@bugfix/changed-files
         with:
-          head_repo: ${{github.event.pull_request.head.repo.full_name}}
-          head_ref: ${{github.event.pull_request.head.ref}}
+          head_repo: vpodorozh/mageos-magento2
+          head_ref: full-integration-tests-workflow
+#          head_repo: ${{github.event.pull_request.head.repo.full_name}}
+#          head_ref: ${{github.event.pull_request.head.ref}}
 
